@@ -14,8 +14,8 @@ pipeline {
                     checkout scm
                     sh "rm -rf brbuild_ios" //This removes the previous checkout of brbuild_ios if it exists.
                     sh "rm -rf ios/fastlane/brbuild_ios" //This removes the brbuild_ios from the fastlane directory if it somehow still exists
-                    sh "git clone https://github.com/pedrosc1967/diccionario_panocho.git"
-                    sh "cp /Users/aplanetbit/StudioProjects/diccionario_panocho/android/key.properties /Users/aplanetbit/.jenkins/workspace/Diccionario_Panocho/diccionario_panocho/android/key.properties"
+                    sh "git clone https://github.com/pedrosc1967/diccionario_leones.git"
+                    sh "cp /Users/aplanetbit/StudioProjects/diccionario_leones/android/key.properties /Users/aplanetbit/.jenkins/workspace/Diccionario_leones/diccionario_leones/android/key.properties"
 
                 }
             }
@@ -23,7 +23,7 @@ pipeline {
             stage ('Flutter Build APK') {
                 steps {
                     sh "flutter build apk"
-                    sh "cp /Users/aplanetbit/.jenkins/workspace/Diccionario_Panocho/build/app/outputs/flutter-apk/app-release.apk /Users/aplanetbit/Downloads/app-release.apk"
+                    sh "cp /Users/aplanetbit/.jenkins/workspace/Diccionario_leones/build/app/outputs/flutter-apk/app-release.apk /Users/aplanetbit/Downloads/app-release.apk"
                     sh "cd /Users/aplanetbit/Downloads"
                     sh "/Users/aplanetbit/resignapk.sh"
                 }
@@ -39,7 +39,7 @@ pipeline {
                       dir('ios'){
                                sh "bundle install"
                                sh "bundle exec fastlane buildAdHoc --verbose"
-                               sh "cp /Users/aplanetbit/.jenkins/workspace/Diccionario_Panocho/ios/Runner.ipa /Users/aplanetbit/Downloads/Runner.ipa"
+                               sh "cp /Users/aplanetbit/.jenkins/workspace/Diccionario_leones/ios/Runner.ipa /Users/aplanetbit/Downloads/Runner.ipa"
                       }
                  }
             }
