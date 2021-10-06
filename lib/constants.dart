@@ -9,14 +9,10 @@ class Constants {
   static const String URLOtherAppsAndroid =
       'https://play.google.com/store/apps/dev?id=8134258655084518574';
   static const String URLOtherAppsIOS =
-      'https://apps.apple.com/us/developer/fermina-soto-gonzlez/id1545741307';
+      'https://apps.apple.com/us/app/diccionario-leones/id1559941265';
   static const String URLAplanetBitAndroid =
       'https://aplanetbit.com/?page_id=1364';
   static const String URLAplanetBitiOS = 'https://aplanetbit.com/?page_id=1364';
-  //static const String URLRateUsAndroid =
-  //    'https://play.google.com/store/apps/details?id=com.aplanetbit.diccionario.leones';
-  //static const String URLRateUSIOS =
-  //    'https://apps.apple.com/us/app/diccionario-leones/id1545741185?action=write-review';
   static const String URLSentry =
       'https://eb23d22adde749e3a92ca37e40380f05@o496488.ingest.sentry.io/5686623';
   static const String OneSignalAppID = '33959e80-0c56-4c3e-885d-36aaa80f839b';
